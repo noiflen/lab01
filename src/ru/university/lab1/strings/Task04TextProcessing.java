@@ -5,7 +5,9 @@ public class Task04TextProcessing {
         System.out.println("1. Палиндром: " + isPalindrome("А роза упала на лапу Азора"));
         System.out.println("2. Разворот слов: " + reverseWords("кот съел мышь"));
         countChars("Hello World 123!");
-        System.out.println("4. Шифр Цезаря (сдвиг 3): " + caesarCipher("Hello", 3));
+        String encrypted = caesarCipher("Hello", 3);
+        System.out.println("4. Шифр Цезаря (сдвиг 3): " + encrypted);
+        System.out.println("   Расшифровка: " + caesarDecipher(encrypted, 3));
         System.out.println("5. Самое длинное слово: " + longestWord("раз два тринадцать"));
     }
 
@@ -67,6 +69,10 @@ public class Task04TextProcessing {
             else res[i] = c;
         }
         return new String(res);
+    }
+
+    private String caesarDecipher(String str, int shift) {
+        return caesarCipher(str, -shift);
     }
 
     private String longestWord(String str) {
