@@ -58,7 +58,7 @@ public class Task03Bitwise {
     private int countBits(int n) {
         int count = 0;
         while (n != 0) {
-            n &= (n - 1); // убираем младший единичный бит
+            n &= (n - 1);
             count++;
         }
         return count;
