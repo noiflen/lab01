@@ -28,7 +28,7 @@ public class Task07Methods {
         System.out.println("   2^3 рекурсивно: " + powerRec(2, 3) + ", итеративно: " + powerIter(2, 3));
         System.out.println("   5^0 рекурсивно: " + powerRec(5, 0) + ", итеративно: " + powerIter(5, 0));
         System.out.println("   3^1 рекурсивно: " + powerRec(3, 1) + ", итеративно: " + powerIter(3, 1));
-        // Итеративный способ работает быстрее, так как нет затрат на создание новых кадров стека при каждом вызове функции.
+
     }
 
     private void print(int v) { System.out.println("   Вызван метод для int: " + v); }
